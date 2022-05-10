@@ -3,7 +3,6 @@
 ##  usersテーブル
 has_many :items
 has_many :records
-has_one  :address
 
 | Column             | Type    | Options                   |
 | ------------------ | ------- | ------------------------- |
@@ -27,7 +26,7 @@ has_one :record
 | item_name             | text       | null: false                    |
 | category_id           | integer    | null: false                    |
 | item_status_id        | integer    | null: false                    |
-| shipping_fee          | integer    | null: false                    |
+| shipping_fee_id       | integer    | null: false                    |
 | prefecture_id         | integer    | null: false                    |
 | scheduled_delivery_id | integer    | null: false                    |
 | price                 | integer    | null: false                    |
@@ -37,6 +36,7 @@ has_one :record
 
 #  addressesテーブル
 belongs_to :user
+belongs_to :record
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
@@ -51,7 +51,8 @@ belongs_to :user
 
 #  recordsテーブル
 belongs_to :user
-belongs_to :items
+belongs_to :item
+has_one :addres
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
