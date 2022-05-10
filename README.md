@@ -52,7 +52,7 @@ belongs_to :record
 #  recordsテーブル
 belongs_to :user
 belongs_to :item
-has_one :addres
+has_one :address
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
