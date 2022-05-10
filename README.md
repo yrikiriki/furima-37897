@@ -28,7 +28,7 @@ has_one :record
 | category_id           | integer    | null: false                    |
 | item_status_id        | integer    | null: false                    |
 | shipping_fee          | integer    | null: false                    |
-| item_prefecture_id    | integer    | null: false                    |
+| prefecture_id         | integer    | null: false                    |
 | scheduled_delivery_id | integer    | null: false                    |
 | price                 | integer    | null: false                    |
 | user                  | references | null: false, foreign_key: true |
@@ -40,7 +40,7 @@ belongs_to :user
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
-| prefecture         | string     | null: false                    |
+| prefecture_id      | string     | null: false                    |
 | city               | string     | null: false                    |
 | postal_code        | integer    | null: false                    |
 | address            | string     | null: false                    |
