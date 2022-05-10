@@ -36,7 +36,6 @@ has_one :record
 
 
 #  addressesテーブル
-belongs_to :user
 belongs_to :record
 
 | Column             | Type       | Options                        |
@@ -51,6 +50,7 @@ belongs_to :record
 
 
 #  recordsテーブル
+belongs_to :user
 belongs_to :item
 has_one :address
 
