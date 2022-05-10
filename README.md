@@ -23,7 +23,8 @@ has_one :record
 
 | Column                | Type       | Options                        |
 | --------------------- | ---------- | ------------------------------ |
-| item_name             | text       | null: false                    |
+| item_name             | string     | null: false                    |
+| item_info             | text       | null: false                    |
 | category_id           | integer    | null: false                    |
 | item_status_id        | integer    | null: false                    |
 | shipping_fee_id       | integer    | null: false                    |
@@ -40,9 +41,9 @@ belongs_to :record
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
-| prefecture_id      | string     | null: false                    |
+| prefecture_id      | integer    | null: false                    |
 | city               | string     | null: false                    |
-| postal_code        | integer    | null: false                    |
+| postal_code        | string     | null: false                    |
 | address            | string     | null: false                    |
 | building           | string     |                                |
 | phone_number       | string     | null: false                    |
@@ -50,7 +51,6 @@ belongs_to :record
 
 
 #  recordsテーブル
-belongs_to :user
 belongs_to :item
 has_one :address
 
