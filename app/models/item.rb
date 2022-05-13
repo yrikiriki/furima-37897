@@ -15,12 +15,8 @@ class Item < ApplicationRecord
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
-  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :item_status
-  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :shipping_fee
-  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
-  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :scheduled_delivery
 end
