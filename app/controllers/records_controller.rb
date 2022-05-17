@@ -1,5 +1,6 @@
 class RecordsController < ApplicationController
-
+  before_action :authenticate_user!, only: :index
+  before_action :move_to_index, only: :index
   def index
     @record_address = RecordAddress.new
     @item = Item.find(params[:item_id])
@@ -31,5 +32,14 @@ class RecordsController < ApplicationController
         currency: 'jpy'                 
       )
   end
-
+  def move_to_index
+    @item = Item.find(params[:item_id])
+    if @item.record == nil
+    unless user_signed_in? && current_user.id != @item.user_id
+      redirect_to root_path
+    end
+    else
+      redirect_to root_path
+    end
+  end
 end
