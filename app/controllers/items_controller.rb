@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
   end
-  
+
   def create
     @item = Item.new(item_params)
     if @item.save
@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
       render :new
     end
   end
+  
   def show
   end
   def edit
